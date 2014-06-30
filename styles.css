@@ -1,0 +1,74 @@
+html {
+	background-color: #F44;
+}
+
+h1 {
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-size: 144;
+	color: #F92;
+	text-align: center;
+	text-transform: capitalize;
+	text-shadow: -1px 0 black, 0 1px black, -10px 0 black, 0 -1px black;
+}
+
+h2 {
+	font-family: 'Lobster', cursive;
+	color: #F92;
+	font-size: 55;
+	text-align: center;
+	position: relative;
+	top: -229px;
+	text-shadow: 6px 0 black, 0 1px black, 4px 0 black, 0 -1px black;
+}
+
+h3 {
+	font-family: 'Permanent Marker', cursive;
+	color: #F92;
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+	width: 85%;
+	top: -190px;
+	text-shadow: -1px 0 black, 0 3px black, -1px 0 black, 0 -1px black;
+}
+
+.aboutMeButton {
+	cursor: pointer;
+	cursor: hand;
+	font-family: 'Bangers';
+	color: #000;
+	text-align: center;
+	position: relative;
+	border: 1px solid black;
+	width: 450px;
+	top: -110px;
+	margin: 0 auto;
+	font-size: 50px;
+	background-color: #F92;
+	-webkit-transition: background-color 0.4s ease;
+    -moz-transition: background-color 0.4s ease;
+    -o-transition: background-color 0.4s ease;
+    transition: background-color 0.4s ease;
+    -webkit-transition: color 0.4s ease;
+    -moz-transition: color 0.4s ease;
+    -o-transition: color 0.4s ease;
+    transition: color 0.4s ease;
+}
+
+.aboutMeButton:hover {
+	background-color: #000;
+	color: #F92;
+}
+
+.aboutMeContainer {
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+	top: -60px;
+	text-align: center;
+}
+
+.aboutMeContent {
+	font-family: 'Kameron', serif;
+	font-size: 55px;
+}
