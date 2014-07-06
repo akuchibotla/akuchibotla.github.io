@@ -1,0 +1,42 @@
+<html>
+
+<title> About Me </title>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="aboutme.css"> <!-- IMPORTING CSS -->
+	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'> <!-- IMPORTING OSWALD FONT -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'> <!-- IMPORTING OPEN SANS CONDENSED FONT -->
+	<link href='http://fonts.googleapis.com/css?family=Abel&effect=anaglyph' rel='stylesheet' type='text/css'> <!-- IMPORTING ABEL FONT -->
+</head>
+
+<body>
+
+	<h1> About Me </h1>
+	<h2> (Anand Kuchibotla, that is, in case you forgot lol) </h2>
+	<div style="position: absolute; left: 50%; margin-left: -307px; margin-top: -6px; padding-bottom: 5%; visibility: hidden; z-index: 1"> <img src='cookie_frames/45.gif' id='mousemove'/> </div>
+	<h3> <span style="margin-right: 660px; z-index: -1;"> I like to think that I'm </span> <span class="font-effect-anaglyph"> multi-dimensional </span> </h3>
+
+</body>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> <!-- IMPORTING JQUERY -->
+<script src="jquery.shuffleLetters.js"></script> <!-- IMPORTING LETTER SHUFFLER -->
+<script src="threesixty.js"></script> <!-- IMPORTING 360 VIEW -->
+
+
+<script>
+	$("h1").shuffleLetters();
+	$(document).ready(function() {
+		var img_array = [];
+
+		for (var i = 0; i < 46; i++){
+			img_array.push("cookie_frames/" + i + ".gif");
+		}
+		$("#mousemove").css({"visibility":"visible", "opacity":"0"}).animate({
+			opacity: "1"
+		}, 500);
+		$("#mousemove").threesixty({images:img_array, method:'mousemove', 'cycle':2, direction:"forward"});
+	});
+
+</script>
+
+</html>

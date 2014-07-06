@@ -1,21 +1,26 @@
 <html>
+
+<link rel="shortcut icon" href="index-favicon.jpg" type="image/x-icon" />
+
+<title> Anand Kuchibotla </title>
+
 <head>
-	<link rel="stylesheet" type="text/css" href="styles.css"> <!-- IMPORTING CSS -->
+	<link rel="stylesheet" type="text/css" href="index.css"> <!-- IMPORTING CSS -->
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'> <!-- IMPORTING PT FONT -->
 	<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'> <!-- IMPORTING LOBSTER FONT -->
 	<link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'> <!-- IMPORTING PERMANENT MARKER FONT -->
 	<link href='http://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'> <!-- IMPORTING BANGERS FONT -->
 	<link href='http://fonts.googleapis.com/css?family=Kameron' rel='stylesheet' type='text/css'> <!-- IMPORTING KAMERON -->
 </head>
-<body>
-
-	<div class="nameholder" id="name" style="height: 150px; width: 30%; margin: 0 auto;">
+<body id="body">
+	<div class="namehover" id="namehover"> </div>
+	<div class="nameholder" id="namecontainer" style="height: 150px; margin: 0 auto;">
 		<h1> <div id="firstName"> ANAND </div> </h1>
 		<h2> <div id="lastName"> Kuchibotla </div> </h2>
 	</div>
 
-	<img src='MickeyHands.png' style="position: relative; top: -153px; left: 50%; margin-left: -372px; z-index: -1; opacity: 0.65;" id="leftHand"/>
-	<img src='MickeyHands.png' style="position: relative; top: -153px; left: 50%; margin-left: 343px; z-index: -1; opacity: 0.65;-moz-transform: scaleX(-1); -o-transform: scaleX(-1); -webkit-transform: scaleX(-1); transform: scaleX(-1); filter: FlipH; -ms-filter: "FlipH";" id="rightHand"/>
+	<img src='MickeyHands.png' class='hand' style="margin-left: -372px;" id="leftHand"/>
+	<img src='MickeyHands.png' class='hand' style="margin-left: 343px; -moz-transform: scaleX(-1); -o-transform: scaleX(-1); -webkit-transform: scaleX(-1); transform: scaleX(-1); filter: FlipH; -ms-filter: "FlipH";" id="rightHand"/>
 
 	<h3> <div style="border: 1px solid black;"> <span style="font-style: italic;">"Lord, grant that I may always desire more than I can accomplish."</span> - Michelangelo </div> </h3>
 
@@ -28,6 +33,7 @@
 </body>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> <!-- IMPORTING JQUERY -->
+<script src="jquery.velocity.min.js"></script> <!-- IMPORTING VELOCITY ANIMATIONS -->
 <script src="index.js"></script> <!-- IMPORTING JAVASCRIPT FOR FILE -->
 
 </html>

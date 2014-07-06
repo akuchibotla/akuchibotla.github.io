@@ -3,39 +3,38 @@ ReadMore = "Click to show more";
 AboutMe = "RAPPER | HACKER | STUDENT";
 Projects = "Things I'm Proud Of"
 
-$("#name").mouseenter(function() {
-	$("#name").css({width: "100%"});
-	$("#leftHand").animate({
+$("#namehover").mouseenter(function() {
+	$("#leftHand").velocity({
 		opacity: "1",
 		marginLeft: "-300px"
 	}, 400);
-	$("#rightHand").animate({
+	$("#rightHand").velocity({
 		opacity: "1",
 		marginLeft: "-13px"
 	}, 400);
-	$("#firstName").animate({
+	$("#firstName").velocity({
 		marginRight: "800px"
 	}, 400);
-	$("#lastName").animate({
+	$("#lastName").velocity({
 		marginLeft: "575px",
 		fontSize: "140",
 		marginTop: "-57px"
 	}, 400);
 }).mouseleave(function() {
-	$("#firstName").animate({
+	$("#firstName").velocity({
 		marginRight: "0px"
 	}, 500);
-	$("#lastName").animate({
+	$("#lastName").velocity({
 		marginLeft: "0px",
 		fontSize: "55",
 		marginTop: "0px"
 	}, 500);
-	$("#leftHand").animate({
-		opacity: "0.65",
+	$("#leftHand").velocity({
+		opacity: "0",
 		marginLeft: "-372px"
 	}, 500);
-	$("#rightHand").animate({
-		opacity: "0.65",
+	$("#rightHand").velocity({
+		opacity: "0",
 		marginLeft: "343px"
 	}, 500);
 });
@@ -56,4 +55,14 @@ $("#AMB").mouseenter(function() {
 	function emptier() {
 		$("#AMC").empty();
 	};
+}).click(function() {
+	$("html").velocity({marginLeft: "-1500px", marginTop:"-1500px", opacity: "0"}, 500).fadeOut(function() {
+		location = "aboutme.html";
+	});
+});
+
+$("#PB").click(function() {
+	$("html").velocity({marginLeft: "-1500px", marginTop:"-1500px", opacity: "0"}, 500).fadeOut(function() {
+		location = "thingsimproudof.html";
+	});
 });
