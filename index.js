@@ -62,7 +62,7 @@ $("#AMB").mouseenter(function() {
 });
 
 $("#PB").click(function() {
-	$("html").velocity({marginLeft: "-1500px", marginTop:"-1500px", opacity: "0"}, 500).fadeOut(function() {
+	$("html").velocity({marginRight: "-1500px", opacity: "0"}, 500).fadeOut(function() {
 		location = "thingsimproudof.html";
 	});
 });
