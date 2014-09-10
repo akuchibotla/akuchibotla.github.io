@@ -1,0 +1,10 @@
+{
+    "1": {
+        "quote": "Hello",
+        "author": "Person"
+    },
+    "2": {
+        "quote": "Bye bye",
+        "author": "Human"
+    }
+}

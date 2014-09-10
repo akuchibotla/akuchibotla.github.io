@@ -1,5 +1,6 @@
 $("h1").css({"opacity":"1"}).shuffleLetters();
 $(document).ready(function() {
+
 	var img_array = [];
 
 	var prefix = 0
