@@ -5,7 +5,7 @@ $(document).ready(function() {
 
 	var prefix = 0
 	for (var i = 0; i < 52; i++){
-		img_array.push("me_contoured/" + i + ".png");
+		img_array.push("contoured/" + i + ".png");
  	}
 	$("#mousemove").css({"visibility":"visible", "opacity":"0"}).animate({
 		opacity: "1"
