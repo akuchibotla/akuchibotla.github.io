@@ -23,3 +23,16 @@ h3 {
 	position: relative;
 	top: 185px;
 }
+
+h4 {
+	font-family: 'Arimo', sans-serif;
+	text-align: center;
+	font-size: 55px;
+	position: relative;
+}
+
+.caption {
+	font-family: 'Dosis', sans-serif;
+	color: white;
+	opacity: 0.75;
+}

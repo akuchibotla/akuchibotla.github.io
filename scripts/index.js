@@ -57,12 +57,12 @@ $("#AMB").mouseenter(function() {
 	};
 }).click(function() {
 	$("html").velocity({marginLeft: "-1500px", marginTop:"-1500px", opacity: "0"}, 500).velocity("fadeOut").queue(function() {
-		location = "aboutme.html";
+		location = "src/aboutme.html";
 	});
 });
 
 $("#PB").click(function() {
 	$("html").velocity({marginRight: "-1500px", opacity: "0"}, 500).velocity("fadeOut").queue(function() {
-		location = "thingsimproudof.html";
+		location = "src/thingsimproudof.html";
 	});
 });
