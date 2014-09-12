@@ -63,19 +63,6 @@ h3 {
 	color: #F92;
 }
 
-.aboutMeContainer {
-	position: relative;
-	margin: 0 auto;
-	width: 100%;
-	top: -60px;
-	text-align: center;
-}
-
-.aboutMeContent {
-	font-family: 'Kameron', serif;
-	font-size: 55px;
-}
-
 .hand {
 	position: relative;
 	top: -153px;

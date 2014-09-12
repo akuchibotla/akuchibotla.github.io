@@ -1,7 +1,6 @@
-ReadMore = "Click to show more";
-
-AboutMe = "RAPPER | HACKER | STUDENT";
-Projects = "Things I'm Proud Of"
+AboutMe = "In a Nutshell";
+Projects = "Things I'm Proud Of";
+Resume = "Hire Me";
 
 $("#namehover").mouseenter(function() {
 	$("#leftHand").velocity({
@@ -39,23 +38,11 @@ $("#namehover").mouseenter(function() {
 	}, 500);
 });
 
-$("#AMB").append("In a Nutshell");
+$("#AMB").append(AboutMe);
+$("#PB").append(Projects);
+$("#RS").append(Resume);
 
-$("#PB").append("Things I'm Proud Of");
-
-$("#AMB").mouseenter(function() {
-	$("#AMC").append("<div id='more'></div>").css({"position":"relative", "top":"-110px", "font-family":"Kameron"});
-	$("#more").append(ReadMore);
-	$("#AMC").append("<span class='aboutMeContent'>" + AboutMe + "</span>").css({"position":"relative", "width":"75%", "margin":"0 auto"}).velocity("fadeIn");
-}).mouseleave(function() {
-	$.when(fader()).then(emptier());
-	function fader() {
-		$("#AMC").fadeOut().css({"border":"0px"});
-	};
-	function emptier() {
-		$("#AMC").empty();
-	};
-}).click(function() {
+$("#AMB").click(function() {
 	$("html").velocity({marginLeft: "-1500px", marginTop:"-1500px", opacity: "0"}, 500).velocity("fadeOut").queue(function() {
 		location = "src/aboutme.html";
 	});

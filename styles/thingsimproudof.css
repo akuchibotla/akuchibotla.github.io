@@ -1,0 +1,20 @@
+body {
+	background: black;
+	transition: background-color 2s ease;
+}
+
+.bodychanged {
+	background: white;
+}
+
+.writing {
+	padding-top: 25%;
+	font-family: 'Iceland', cursive;
+	font-size: 50px;
+	color: white;
+}
+
+h1 {
+	font-family: 'Megrim', cursive;
+	font-size: 100px;
+}
