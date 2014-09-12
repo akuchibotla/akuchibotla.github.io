@@ -2,7 +2,13 @@ AboutMe = "In a Nutshell";
 Projects = "Things I'm Proud Of";
 Resume = "Hire Me";
 
-$("#namehover").mouseenter(function() {
+var handtimeout;
+
+$("#namehover").hover(function(){
+	handtimeout = setTimeout(mouseenter, 200);
+}, mouseexit);
+
+function mouseenter() {
 	$("#leftHand").velocity({
 		opacity: "1",
 		marginLeft: "-300px"
@@ -19,7 +25,10 @@ $("#namehover").mouseenter(function() {
 		fontSize: "140",
 		marginTop: "-57px"
 	}, 400);
-}).mouseleave(function() {
+}
+
+function mouseexit() {
+	clearTimeout(handtimeout);
 	$("#firstName").velocity({
 		marginRight: "0px"
 	}, 500);
@@ -36,7 +45,7 @@ $("#namehover").mouseenter(function() {
 		opacity: "0",
 		marginLeft: "343px"
 	}, 500);
-});
+}
 
 $("#AMB").append(AboutMe);
 $("#PB").append(Projects);
