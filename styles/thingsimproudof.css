@@ -1,9 +1,13 @@
 body {
-	background: black;
-	transition: background-color 2s ease;
+	background: white;
+	transition: background-color 0.5s ease;
 }
 
-.bodychanged {
+.bgblack {
+	background-color: black;
+}
+
+.bgwhite {
 	background: white;
 }
 
@@ -11,6 +15,13 @@ body {
 	padding-top: 25%;
 	font-family: 'Iceland', cursive;
 	font-size: 50px;
+	color: white;
+}
+
+.skip {
+	opacity: 0;
+	cursor: hand;
+	font-family: 'Iceland', cursive;
 	color: white;
 }
 

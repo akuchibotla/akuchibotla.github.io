@@ -1,5 +1,6 @@
 body {
 	background-color: #F44;
+	transition: background-color .5s ease;
 }
 
 h1 {
