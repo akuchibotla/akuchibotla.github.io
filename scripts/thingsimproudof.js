@@ -28,7 +28,7 @@ appear = function() {
 		appear_once = true;
 		$(".element").fadeOut(1000);
 		$(".element").remove();
-		$("#skip").fadeOut(1000);
+		$("#skip").fadeOut(10);
 		$("body").toggleClass("bgwhite");
 		header1 = "<center> <h1> THINGS I'M PROUD OF </h1> <center>";
 		$(header1).delay(1000).hide().appendTo("body").fadeIn(1000);
