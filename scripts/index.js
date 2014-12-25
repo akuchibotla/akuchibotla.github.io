@@ -1,12 +1,16 @@
-AboutMe = "In a Nutshell";
-Projects = "Things I'm Proud Of";
-Resume = "Hire Me";
-
 var handtimeout;
 
 $("#namehover").hover(function(){
 	handtimeout = setTimeout(mouseenter, 200);
 }, mouseexit);
+
+$("#quoteBox").addClass("quoteBox").click(quoteRotate);
+$("#author").css("font-style", "normal");
+
+function quoteRotate() {
+	$('#quote').text('"Many failures are from people who didn\'t realize how close they were to success when they gave up"');
+	$('#author').text("Edison");
+}
 
 function mouseenter() {
 	$("#leftHand").velocity({
@@ -46,19 +50,3 @@ function mouseexit() {
 		marginLeft: "343px"
 	}, 500);
 }
-
-$("#AMB").append(AboutMe);
-$("#PB").append(Projects);
-$("#RS").append(Resume);
-
-$("#AMB").click(function() {
-	$("html").velocity({marginLeft: "-1500px", marginTop:"-1500px", opacity: "0"}, 500).velocity("fadeOut").queue(function() {
-		location = "src/aboutme.html";
-	});
-});
-
-$("#PB").click(function() {
-	$("html").velocity({marginRight: "-1500px", opacity: "0"}, 500).velocity("fadeOut").queue(function() {
-		location = "src/thingsimproudof.html";
-	});
-});
