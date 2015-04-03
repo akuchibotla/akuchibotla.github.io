@@ -43,6 +43,18 @@ h4 {
 	color: black;
 }
 
+h5 {
+	font-family: 'Fjalla One', sans-serif;
+	font-size: 50;
+	color: white;
+	text-shadow: -5px 1px black;
+}
+
+#panelContent {
+	position: relative;
+	margin-top: -125px;
+}
+
 .quoteBox {
 	position: relative;
 	cursor: hand;
@@ -108,14 +120,14 @@ h4 {
 	background-color: orange;
 }
 
+#back {
+	position: relative;
+	margin-top: -125px;
+	cursor: hand;
+}
+
 #left {
 	background-image: url(../files/aboutme_bw.jpg);
-	-khtml-transition: background-image 100ms linear;
-	-webkit-transition: background-image 100ms linear;
-    -moz-transition: background-image 100ms linear;
-    -o-transition: background-image 100ms linear;
-    -ms-transition: background-image 100ms linear;
-    transition: background-image 100ms linear;
 }
 
 #left:hover {
@@ -129,12 +141,6 @@ h4 {
 #middle {
 	background-image: url(../files/thingsipo_bw.jpg);
 	background-position: center;
-	-khtml-transition: background-image 100ms linear;
-	-webkit-transition: background-image 100ms linear;
-    -moz-transition: background-image 100ms linear;
-    -o-transition: background-image 100ms linear;
-    -ms-transition: background-image 100ms linear;
-    transition: background-image 100ms linear;
 }
 
 #middle:hover {
@@ -148,12 +154,6 @@ h4 {
 #right {
 	background-image: url(../files/hireme_bw.jpg);
 	background-position: 0% 50%;
-	-khtml-transition: background-image 100ms linear;
-	-webkit-transition: background-image 100ms linear;
-    -moz-transition: background-image 100ms linear;
-    -o-transition: background-image 100ms linear;
-    -ms-transition: background-image 100ms linear;
-    transition: background-image 100ms linear;
 }
 
 #right:hover {

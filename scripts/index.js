@@ -2,7 +2,12 @@ $(".innerPanel").hide();
 
 $(document).ready(function() {
 
-	$(".innerPanel").fadeIn(2500);
+	$("#panelContent").hide();
+	$("#comicPanel").hide();
+	$("#back").hide();
+
+	$("#comicPanel").slideDown(1000);
+	$(".innerPanel").delay(1000).fadeIn(2500);
 
 	var handtimeout;
 	var quoteJSON = null;
@@ -11,7 +16,34 @@ $(document).ready(function() {
 		handtimeout = setTimeout(mouseEnter, 200);
 	}, mouseExit);
 
-	$("#last").css({'width': ''});
+	$("#back").click(function(event) {
+			$("#back").slideUp();
+			$("#panelContent").fadeOut();
+			$("#comicPanel").slideDown(1000);
+			$(".innerPanel").delay(1000).fadeIn(500);
+	});
+
+	// On click of caption
+	$("#comicPanel").click(function(event) {
+		$(".innerPanel").fadeOut(500);
+		$("#comicPanel").delay(500).slideUp(1000);
+		$("#back").delay(750).slideDown();
+
+		// $("#"+event.target.id).fadeIn();
+
+		if (event.target.id == "left") {
+			header = "ABOUT ME";
+		}
+		else if (event.target.id == "middle") {
+			header = "THINGS I'M PROUD OF";
+		}
+		else if (event.target.id == "right") {
+			header = "HIRE ME";
+		}
+
+		$("h5").html(header);
+		$("#panelContent").delay(2000).fadeIn(500);
+	});
 
 	$("#quoteBox").addClass("quoteBox").click(quoteRotate);
 	$("#author").css("font-style", "normal");
