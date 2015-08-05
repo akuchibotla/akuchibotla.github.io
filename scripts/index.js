@@ -2,12 +2,18 @@ $(".innerPanel").hide();
 
 $(document).ready(function() {
 
-	$("#panelContent").hide();
+	var activePanelId;
+
+	$("#aboutMePanelContent").hide();
+	$("#thingsIPOPanelContent").hide();
+	$("#hireMePanelContent").hide();
+	$(".linkPanel").hide();
 	$("#comicPanel").hide();
 	$("#back").hide();
 
-	$("#comicPanel").slideDown(1000);
-	$(".innerPanel").delay(1000).fadeIn(2500);
+	$("#comicPanel").delay(500).slideDown(1000);
+	$(".innerPanel").delay(1500).fadeIn(2000);
+	$(".linkPanel").delay(1500).fadeIn(2000);
 
 	var handtimeout;
 	var quoteJSON = null;
@@ -18,31 +24,40 @@ $(document).ready(function() {
 
 	$("#back").click(function(event) {
 			$("#back").slideUp();
-			$("#panelContent").fadeOut();
+			$(activePanelId).fadeOut();
+			$(".linkPanel").fadeOut();
 			$("#comicPanel").slideDown(1000);
 			$(".innerPanel").delay(1000).fadeIn(500);
+			$(".linkPanel").delay(1000).fadeIn(500);
 	});
+
+	function showPanelContent(panelContentId) {
+		activePanelId = panelContentId;
+		$(".linkPanel").fadeOut();
+		$(activePanelId).delay(2000).fadeIn(500);
+		$(".linkPanel").delay(2000).fadeIn(500);
+		$("#back").delay(2500).slideDown();
+	}
 
 	// On click of caption
 	$("#comicPanel").click(function(event) {
 		$(".innerPanel").fadeOut(500);
 		$("#comicPanel").delay(500).slideUp(1000);
-		$("#back").delay(750).slideDown();
 
 		// $("#"+event.target.id).fadeIn();
 
 		if (event.target.id == "left") {
-			header = "ABOUT ME";
+			$('#back').css('left', 125);
+			showPanelContent('#aboutMePanelContent');
 		}
 		else if (event.target.id == "middle") {
-			header = "THINGS I'M PROUD OF";
+			$('#back').css('left', 235);
+			showPanelContent('#thingsIPOPanelContent');
 		}
 		else if (event.target.id == "right") {
-			header = "HIRE ME";
+			$('#back').css('left', 115);
+			showPanelContent('#hireMePanelContent');
 		}
-
-		$("h5").html(header);
-		$("#panelContent").delay(2000).fadeIn(500);
 	});
 
 	$("#quoteBox").addClass("quoteBox").click(quoteRotate);

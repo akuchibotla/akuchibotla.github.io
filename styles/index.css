@@ -50,9 +50,47 @@ h5 {
 	text-shadow: -5px 1px black;
 }
 
-#panelContent {
+hr {
+	color: black;
+	border-color: black;
+	background-color: black;
+}
+
+.linkPanel {
+	margin-top: 50px;
+}
+
+.bottomLink {
+	text-decoration: none;
+}
+
+.icon {
+	display:inline-block;
+    width: 35px; 
+    height: 35px; 
+}
+
+.icon:hover {
+	transform: scale(1.05, 1.05);
+	-webkit-transform: scale(1.05, 1.05);
+}
+
+.logo {
+	margin-left: auto;
+	margin-top: -25px;
+	margin-bottom: 10px;
+    width: 75%;
+}
+
+.panelContent {
 	position: relative;
-	margin-top: -125px;
+	margin-top: -150px;
+}
+
+.panelContentBody {
+	margin-top: -50px;
+	width: 50%;
+	font-family: 'Walter Turncoat', cursive;
 }
 
 .quoteBox {
@@ -120,18 +158,35 @@ h5 {
 	background-color: orange;
 }
 
+
 #back {
 	position: relative;
 	margin-top: -125px;
 	cursor: hand;
 }
 
+#back:hover {
+	transform: rotate(5deg);
+	-webkit-transform: rotate(5deg);
+}
+
 #left {
-	background-image: url(../files/aboutme_bw.jpg);
+	background-image: url(../files/aboutme.jpg);
+	-webkit-filter: grayscale(1);
+	-moz-filter: grayscale(1);
+	-o-filter: grayscale(1);
+	filter: grayscale(1);
 }
 
 #left:hover {
-	background-image: url(../files/aboutme.jpg);
+	-webkit-transition: all 75ms linear;
+    -moz-transition: all 75ms linear;
+    -o-transition: all 75ms linear;
+    transition: all 75ms linear;
+	-webkit-filter: grayscale(0);
+	-moz-filter: grayscale(0);
+	-o-filter: grayscale(0);
+	filter: grayscale(0);
 }
 
 #aboutMeCaption {
@@ -139,12 +194,23 @@ h5 {
 }
 
 #middle {
-	background-image: url(../files/thingsipo_bw.jpg);
+	background-image: url(../files/thingsipo.jpg);
 	background-position: center;
+	-webkit-filter: grayscale(1);
+	-moz-filter: grayscale(1);
+	-o-filter: grayscale(1);
+	filter: grayscale(1);
 }
 
 #middle:hover {
-	background-image: url(../files/thingsipo.jpg);
+	-webkit-transition: all 75ms linear;
+    -moz-transition: all 75ms linear;
+    -o-transition: all 75ms linear;
+    transition: all 75ms linear;
+	-webkit-filter: grayscale(0);
+	-moz-filter: grayscale(0);
+	-o-filter: grayscale(0);
+	filter: grayscale(0);
 }
 
 #thingsIPOCaption {
@@ -152,12 +218,23 @@ h5 {
 }
 
 #right {
-	background-image: url(../files/hireme_bw.jpg);
+	background-image: url(../files/hireme.jpg);
 	background-position: 0% 50%;
+	-webkit-filter: grayscale(1);
+	-moz-filter: grayscale(1);
+	-o-filter: grayscale(1);
+	filter: grayscale(1);
 }
 
 #right:hover {
-	background-image: url(../files/hireme.jpg);
+	-webkit-transition: all 75ms linear;
+    -moz-transition: all 75ms linear;
+    -o-transition: all 75ms linear;
+    transition: all 75ms linear;
+	-webkit-filter: grayscale(0);
+	-moz-filter: grayscale(0);
+	-o-filter: grayscale(0);
+	filter: grayscale(0);
 }
 
 #hireMeCaption {
