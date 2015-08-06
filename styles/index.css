@@ -50,6 +50,13 @@ h5 {
 	text-shadow: -5px 1px black;
 }
 
+h6 {
+	font-family: 'Architects Daughter', cursive;
+	margin-top: -15px;
+	margin-bottom: -15px;
+	font-size: 35px;
+}
+
 hr {
 	color: black;
 	border-color: black;
