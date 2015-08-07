@@ -1,11 +1,4 @@
 $(".innerPanel").hide();
-$("#quoteBox").hide();
-$("#aboutMePanelContent").hide();
-$("#thingsIPOPanelContent").hide();
-$("#hireMePanelContent").hide();
-$(".linkPanel").hide();
-$("#comicPanel").hide();
-$("#back").hide();
 
 var quoteJSON;
 
@@ -16,15 +9,21 @@ $.ajax({
 	async: true,
 	success: function(data) {
 		quoteJSON = data['quoteAuthorPairs'];
-		startSite(quoteJSON);
+		$(document).ready(startSite(quoteJSON));
 	}
 });
 
 function startSite(quoteJSON) {
 
 	var activePanelId;
-	$("#loading").fadeOut();
-	$("#quoteBox").fadeIn();
+	$("#loading").hide();
+	$("#aboutMePanelContent").hide();
+	$("#thingsIPOPanelContent").hide();
+	$("#hireMePanelContent").hide();
+	$(".linkPanel").hide();
+	$("#comicPanel").hide();
+	$("#back").hide();
+
 	$("#comicPanel").delay(500).slideDown(1000);
 	$(".innerPanel").delay(1500).fadeIn(2000);
 	$(".linkPanel").delay(1500).fadeIn(2000);
