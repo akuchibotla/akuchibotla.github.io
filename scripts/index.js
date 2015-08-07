@@ -16,6 +16,8 @@ $.ajax({
 	async: true,
 	success: function(data) {
 		quoteJSON = data['quoteAuthorPairs'];
+		$("#loading").delay(1000);
+		$("#loadingCaption").delay(1000);
 		$(document).ready(startSite(quoteJSON));
 	}
 });
