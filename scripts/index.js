@@ -22,12 +22,12 @@ $.ajax({
 
 function startSite(quoteJSON) {
 	var activePanelId;
-	$("#loading").fadeOut(200);
-	$("#loadingCaption").fadeOut(200);
-	$("#quoteBox").delay(500).fadeIn();
-	$("#comicPanel").delay(500).slideDown(1000);
-	$(".innerPanel").delay(1500).fadeIn(2000);
-	$(".linkPanel").delay(1500).fadeIn(2000);
+	$("#loading").fadeOut();
+	$("#loadingCaption").fadeOut();
+	$("#quoteBox").delay(1500).fadeIn();
+	$("#comicPanel").delay(1500).slideDown(1000);
+	$(".innerPanel").delay(2500).fadeIn(2000);
+	$(".linkPanel").delay(2500).fadeIn(2000);
 
 	var handtimeout;
 
