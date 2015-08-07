@@ -1,4 +1,11 @@
 $(".innerPanel").hide();
+$("#quoteBox").hide();
+$("#aboutMePanelContent").hide();
+$("#thingsIPOPanelContent").hide();
+$("#hireMePanelContent").hide();
+$(".linkPanel").hide();
+$("#comicPanel").hide();
+$("#back").hide();
 
 var quoteJSON;
 
@@ -14,16 +21,10 @@ $.ajax({
 });
 
 function startSite(quoteJSON) {
-
 	var activePanelId;
-	$("#loading").hide();
-	$("#aboutMePanelContent").hide();
-	$("#thingsIPOPanelContent").hide();
-	$("#hireMePanelContent").hide();
-	$(".linkPanel").hide();
-	$("#comicPanel").hide();
-	$("#back").hide();
-
+	$("#loading").fadeOut(200);
+	$("#loadingCaption").fadeOut(200);
+	$("#quoteBox").delay(500).fadeIn();
 	$("#comicPanel").delay(500).slideDown(1000);
 	$(".innerPanel").delay(1500).fadeIn(2000);
 	$(".linkPanel").delay(1500).fadeIn(2000);

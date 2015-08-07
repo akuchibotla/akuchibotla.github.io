@@ -165,6 +165,9 @@ hr {
 	background-color: orange;
 }
 
+#loadingCaption {
+	font-family: 'Permanent Marker', cursive;
+}
 
 #back {
 	position: relative;
