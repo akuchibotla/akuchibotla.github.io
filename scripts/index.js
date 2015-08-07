@@ -16,8 +16,8 @@ $.ajax({
 	async: true,
 	success: function(data) {
 		quoteJSON = data['quoteAuthorPairs'];
-		$("#loading").delay(1000);
-		$("#loadingCaption").delay(1000);
+		$("#loading").delay(2000);
+		$("#loadingCaption").delay(2000);
 		$(document).ready(startSite(quoteJSON));
 	}
 });
@@ -26,10 +26,10 @@ function startSite(quoteJSON) {
 	var activePanelId;
 	$("#loading").fadeOut();
 	$("#loadingCaption").fadeOut();
-	$("#quoteBox").delay(1500).fadeIn();
-	$("#comicPanel").delay(1500).slideDown(1000);
-	$(".innerPanel").delay(2500).fadeIn(2000);
-	$(".linkPanel").delay(2500).fadeIn(2000);
+	$("#quoteBox").delay(2500).fadeIn();
+	$("#comicPanel").delay(2500).slideDown(1000);
+	$(".innerPanel").delay(3500).fadeIn(2000);
+	$(".linkPanel").delay(3500).fadeIn(2000);
 
 	var handtimeout;
 
