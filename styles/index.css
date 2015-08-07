@@ -165,7 +165,13 @@ hr {
 	background-color: orange;
 }
 
+#loading {
+	margin-top: -50px;
+	width: 15%;
+}
+
 #loadingCaption {
+	font-size: 20px;
 	font-family: 'Permanent Marker', cursive;
 }
 
