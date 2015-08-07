@@ -1,9 +1,22 @@
 $(".innerPanel").hide();
 
-$(document).ready(function() {
+var quoteJSON;
+
+// Pulling quote JSON from myjson.com servers
+$.ajax({
+	url: "https://api.myjson.com/bins/3s43z",
+	dataType: 'json',
+	async: true,
+	success: function(data) {
+		quoteJSON = data['quoteAuthorPairs'];
+		startSite(quoteJSON);
+	}
+});
+
+function startSite(quoteJSON) {
 
 	var activePanelId;
-
+	$("#loading").hide();
 	$("#aboutMePanelContent").hide();
 	$("#thingsIPOPanelContent").hide();
 	$("#hireMePanelContent").hide();
@@ -16,7 +29,6 @@ $(document).ready(function() {
 	$(".linkPanel").delay(1500).fadeIn(2000);
 
 	var handtimeout;
-	var quoteJSON = null;
 
 	$("#namehover").hover(function(){
 		handtimeout = setTimeout(mouseEnter, 200);
@@ -66,17 +78,6 @@ $(document).ready(function() {
 	// Rotate quotes upon click
 	function quoteRotate() {
 		quote = $("#quote");
-		// Pulling quote JSON from myjson.com servers
-		if (quoteJSON === null) {
-			$.ajax({
-				url: "https://api.myjson.com/bins/3s43z",
-				dataType: 'json',
-				async: false,
-				success: function(data) {
-					quoteJSON = data['quoteAuthorPairs'];
-				}
-			});
-		}
 		do
 			new_quote = quoteJSON[Math.floor((Math.random() * quoteJSON.length))];
 		while (quote == new_quote);
@@ -129,4 +130,4 @@ $(document).ready(function() {
 			marginLeft: "343px"
 		}, 500);
 	}
-});
+}
