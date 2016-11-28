@@ -63,6 +63,15 @@ hr {
 	background-color: black;
 }
 
+a {
+	color: #8E4600;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #F9D5B2;
+}
+
 .linkPanel {
 	margin-top: 50px;
 }
